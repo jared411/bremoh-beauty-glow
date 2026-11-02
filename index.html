@@ -1,1 +1,509 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#241326">
+<title>BREMOH BEAUTY GLOW | Beauty That Comes to You</title>
+<meta name="description" content="BREMOH BEAUTY GLOW offers mobile beauty services across Nairobi, including nails, makeup, lashes and bridal beauty.">
+<style>
+:root {
+  --dark:#241326;
+  --purple:#57335f;
+  --pink:#e9b5c8;
+  --nude:#f7eee8;
+  --gold:#c8a45d;
+  --white:#fffaf8;
+  --text:#342a35;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--white);
+  color:var(--text);
+  line-height:1.6;
+}
+a {text-decoration:none;color:inherit}
+button,input,select,textarea {font:inherit}
+header {
+  background:var(--dark);
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.logo {
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.logo span {color:var(--gold)}
+nav {display:flex;gap:25px;align-items:center}
+nav a {font-size:13px;color:#f6eaf1}
+nav a:hover {color:var(--gold)}
+.menu-btn {
+  display:none;
+  border:1px solid var(--gold);
+  background:transparent;
+  color:white;
+  padding:8px 12px;
+  border-radius:6px;
+}
+.hero {
+  min-height:600px;
+  padding:90px 8%;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 80% 35%,#80517b 0%,transparent 35%),
+    linear-gradient(115deg,#241326,#422648 65%,#70466a);
+  color:white;
+}
+.hero-content {max-width:690px}
+.eyebrow {
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:22px;
+}
+.hero h1 {
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.05;
+  margin-bottom:22px;
+}
+.hero h1 span {color:var(--pink)}
+.hero p {
+  max-width:520px;
+  color:#f2e6ee;
+  font-size:17px;
+  margin-bottom:30px;
+}
+.btn {
+  display:inline-block;
+  background:var(--gold);
+  color:#211522;
+  padding:14px 25px;
+  border-radius:30px;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+  transition:.2s;
+}
+.btn:hover {transform:translateY(-2px);background:#e1c17e}
+.btn-outline {
+  background:transparent;
+  border:1px solid var(--gold);
+  color:white;
+  margin-left:10px;
+}
+section {padding:85px 8%}
+.section-heading {
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 45px;
+}
+.section-heading small {
+  color:var(--purple);
+  letter-spacing:3px;
+  font-weight:bold;
+}
+.section-heading h2 {
+  font-size:clamp(30px,4vw,43px);
+  color:var(--dark);
+  margin:10px 0;
+}
+.section-heading p {color:#756a75}
+.services {
+  background:var(--nude);
+}
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.service-card {
+  background:white;
+  padding:28px 20px;
+  border-radius:15px;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 8px 25px #39203b0c;
+}
+.service-icon {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#f6e6ee;
+  font-size:23px;
+  margin-bottom:18px;
+}
+.service-card h3 {color:var(--dark);margin-bottom:8px}
+.service-card p {font-size:14px;color:#756a75}
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+.about-art {
+  min-height:360px;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 25% 25%,#e8b4c8,transparent 35%),
+    linear-gradient(140deg,#513458,#241326);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+.about-art strong {
+  font-size:34px;
+  letter-spacing:3px;
+}
+.about-copy h2 {
+  font-size:38px;
+  line-height:1.15;
+  color:var(--dark);
+  margin:15px 0;
+}
+.about-copy p {color:#756a75;margin-bottom:16px}
+.location-note {
+  background:#f7eee8;
+  border-left:4px solid var(--gold);
+  padding:16px;
+  border-radius:5px;
+  margin-top:20px;
+}
+.booking {
+  background:var(--dark);
+  color:white;
+}
+.booking .section-heading h2 {color:white}
+.booking .section-heading p {color:#e0d1df}
+.booking .section-heading small {color:var(--gold)}
+.booking-wrap {
+  max-width:760px;
+  margin:auto;
+  background:white;
+  color:var(--text);
+  border-radius:18px;
+  padding:32px;
+}
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.field {margin-bottom:17px}
+.field.full {grid-column:1/-1}
+label {
+  display:block;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:7px;
+  color:var(--dark);
+}
+input,select,textarea {
+  width:100%;
+  padding:13px;
+  border:1px solid #ded3dc;
+  border-radius:8px;
+  background:#fff;
+  color:var(--text);
+}
+textarea {min-height:105px;resize:vertical}
+input:focus,select:focus,textarea:focus {
+  outline:2px solid var(--pink);
+  border-color:var(--purple);
+}
+.booking-wrap .btn {width:100%;margin-top:8px}
+.form-note {
+  font-size:12px;
+  color:#756a75;
+  margin-top:13px;
+  text-align:center;
+}
+.contact {
+  background:var(--nude);
+  text-align:center;
+}
+.contact h2 {font-size:35px;color:var(--dark);margin-bottom:12px}
+.contact p {color:#756a75;margin-bottom:20px}
+footer {
+  background:#160d19;
+  color:#e9dce8;
+  text-align:center;
+  padding:27px 15px;
+  font-size:13px;
+}
+footer span {color:var(--gold)}
+.whatsapp-float {
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  z-index:30;
+  background:#25d366;
+  color:white;
+  padding:14px 19px;
+  border-radius:40px;
+  font-weight:bold;
+  box-shadow:0 5px 20px #0003;
+}
+@media(max-width:900px) {
+  .service-grid {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px) {
+  header {padding:15px 5%}
+  .logo {font-size:16px}
+  .menu-btn {display:block}
+  nav {
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    background:var(--dark);
+    padding:22px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  nav.open {display:flex}
+  .hero {min-height:540px;padding:75px 7%}
+  section {padding:65px 6%}
+  .service-grid {grid-template-columns:1fr 1fr;gap:12px}
+  .service-card {padding:20px 14px}
+  .about-grid {grid-template-columns:1fr;gap:30px}
+  .about-art {min-height:230px}
+  .form-grid {grid-template-columns:1fr}
+  .field.full {grid-column:auto}
+  .booking-wrap {padding:22px}
+  .btn-outline {margin:12px 0 0}
+}
+@media(max-width:380px) {
+  .service-grid {grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#home">BREMOH <span>BEAUTY GLOW</span></a>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+  <nav id="navigation">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#booking" onclick="closeMenu()">Book Now</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">BEAUTY • CONFIDENCE • GLOW</div>
+    <h1>Your Beauty.<br>Your Style.<br><span>Your Glow.</span></h1>
+    <p>Enjoy professional beauty services without leaving your comfort zone. We bring your beauty experience right to your doorstep across Nairobi.</p>
+    <a class="btn" href="#booking">Book Your Appointment</a>
+    <a class="btn btn-outline" href="#services">Explore Services</a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-heading">
+    <small>WHAT WE OFFER</small>
+    <h2>Our Beauty Services</h2>
+    <p>From everyday elegance to special occasions, we are here to help you look and feel your best.</p>
+  </div>
+  <div class="service-grid">
+    <article class="service-card">
+      <div class="service-icon">💅</div>
+      <h3>Manicures</h3>
+      <p>Beautifully cared-for hands and polished nails.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">✨</div>
+      <h3>Pedicures</h3>
+      <p>Relaxing foot care and beautiful finishing touches.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">💜</div>
+      <h3>Acrylic Nails</h3>
+      <p>Stylish enhancements and custom nail shapes.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">🌸</div>
+      <h3>Gel Nails</h3>
+      <p>Glossy, polished looks for your personal style.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">🎨</div>
+      <h3>Nail Art</h3>
+      <p>Creative nail designs that express your personality.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">💄</div>
+      <h3>Makeup</h3>
+      <p>Makeup looks for everyday moments and special events.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">👰</div>
+      <h3>Bridal Makeup</h3>
+      <p>Special occasion beauty for your unforgettable day.</p>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">👁️</div>
+      <h3>Lashes</h3>
+      <p>Beautiful lash styling to complete your look.</p>
+    </article>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-art">
+      <div>
+        <strong>BEAUTY<br>COMES TO YOU</strong>
+        <p style="color:#f3dce9;margin-top:15px">Your glow, wherever you are.</p>
+      </div>
+    </div>
+    <div class="about-copy">
+      <div class="eyebrow" style="color:#a27b42">A LITTLE ABOUT US</div>
+      <h2>Beauty made convenient.</h2>
+      <p>BREMOH BEAUTY GLOW is about helping you enjoy beauty services in a comfortable and convenient way.</p>
+      <p>Whether you are preparing for a special occasion or simply treating yourself, we bring our services to you.</p>
+      <div class="location-note">
+        <strong>📍 Serving Nairobi, Kenya</strong>
+        <p style="margin:5px 0 0">We travel to our clients. Transport charges depend on your location and are confirmed before your appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="section-heading">
+    <small>LET'S GET YOU GLOWING</small>
+    <h2>Book an Appointment</h2>
+    <p>Fill in your details and send your booking request directly to our WhatsApp.</p>
+  </div>
+  <div class="booking-wrap">
+    <form id="bookingForm">
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" required placeholder="Enter your name">
+        </div>
+        <div class="field">
+          <label for="phone">Your phone number *</label>
+          <input id="phone" name="phone" type="tel" required placeholder="Your contact number">
+        </div>
+        <div class="field">
+          <label for="service">Choose a service *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Manicure</option>
+            <option>Pedicure</option>
+            <option>Acrylic nails</option>
+            <option>Gel nails</option>
+            <option>Nail art</option>
+            <option>Makeup</option>
+            <option>Bridal makeup</option>
+            <option>Lashes</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Preferred appointment date *</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="time">Preferred time</label>
+          <input id="time" name="time" type="time">
+        </div>
+        <div class="field">
+          <label for="location">Your location in Nairobi *</label>
+          <input id="location" name="location" required placeholder="e.g. Kilimani, Westlands">
+        </div>
+        <div class="field full">
+          <label for="message">Additional details</label>
+          <textarea id="message" name="message" placeholder="Tell us about the look you want or any other details."></textarea>
+        </div>
+      </div>
+      <button class="btn" type="submit">Send Booking Request on WhatsApp</button>
+      <p class="form-note">Your appointment is not confirmed until we contact you. Any travel charge will be discussed before confirmation.</p>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow" style="color:#a27b42">GET IN TOUCH</div>
+  <h2>Ready for your glow?</h2>
+  <p>Have a question or want to discuss a beauty service? Contact us directly.</p>
+  <a class="btn" href="https://wa.me/254740494230" target="_blank" rel="noopener">Chat with Us on WhatsApp</a>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> <span>BREMOH BEAUTY GLOW</span>. All rights reserved.</p>
+  <p>Bringing beauty to your doorstep across Nairobi.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/254740494230" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp ✆</a>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navigation").classList.toggle("open");
+}
+function closeMenu() {
+  document.getElementById("navigation").classList.remove("open");
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const dateInput = document.getElementById("date");
+const today = new Date();
+const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+  .toISOString().split("T")[0];
+dateInput.min = localToday;
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value || "Not specified";
+  const location = document.getElementById("location").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const bookingMessage =
+`Hello BREMOH BEAUTY GLOW! I would like to request an appointment.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Preferred date: ${date}
+Preferred time: ${time}
+Location: ${location}
+Additional details: ${message || "None"}
+
+Please confirm availability and let me know the applicable travel charge. Thank you!`;
+
+  const whatsappURL = "https://wa.me/254740494230?text=" + encodeURIComponent(bookingMessage);
+  window.open(whatsappURL, "_blank");
+});
+</script>
+</body>
+</html>
+
