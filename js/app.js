@@ -146,5 +146,6 @@
   });
 
   loadServices();
-  loadGallery();
+  // The gallery is the fixed collage picture in index.html, so the database gallery is not loaded over it.
+  // loadGallery();
 })();
