@@ -108,6 +108,13 @@
     e.preventDefault();
     const msg = $("booking-msg");
     const btn = e.target.querySelector("button");
+    // Bots fill the hidden "website" field. Pretend it worked, but save nothing.
+    if ($("hp") && $("hp").value) {
+      e.target.reset();
+      msg.className = "msg ok";
+      msg.textContent = "Thank you! Your booking request was received.";
+      return;
+    }
     const d = {
       service_id: $("service").value,
       name: $("name").value.trim(),
